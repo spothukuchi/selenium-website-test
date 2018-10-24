@@ -1,3 +1,5 @@
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -5,11 +7,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class WebTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws MalformedURLException {
 		System.setProperty("webdriver.gecko.driver", "./bin/geckodriver.exe");
+		
+		//web app to be tested
+		String url = "http://facebook.com";
+		
+		//selenium grid url
+		String node = "http:narmada.cegres.co.in:4444/wd/hub";
 		
 		//headless mode
 		/*FirefoxBinary firefoxBinary = new FirefoxBinary(); 
@@ -21,7 +31,12 @@ public class WebTest {
 		//head mode
 		WebDriver driver = new FirefoxDriver();
 		
-		driver.get("http://facebook.com");
+		//selenium grid
+		/*DesiredCapabilities cap = DesiredCapabilities.firefox();
+		driver = new RemoteWebDriver(new URL(node), cap);
+		driver.navigate().to(url);*/
+		
+		driver.get(url);
 		System.out.println("Successfully opened the website.");
 		
 		driver.manage().window().maximize();
