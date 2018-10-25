@@ -9,13 +9,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.Test;
 
 public class WebTest {
 
-	@org.testng.annotations.Test
+	@Test
 	public static void main(String[] args) throws MalformedURLException {
 		System.setProperty("webdriver.gecko.driver", "~/geckodriver");
 		//System.setProperty("webdriver.gecko.driver", "./bin/geckodriver.exe");
+		
 		//web app to be tested
 		String url = "http://facebook.com";
 		
