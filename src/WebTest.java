@@ -2,7 +2,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -13,7 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class WebTest {
 
-	@Test
+	@org.testng.annotations.Test
 	public static void main(String[] args) throws MalformedURLException {
 		System.setProperty("webdriver.gecko.driver", "~/geckodriver");
 		
