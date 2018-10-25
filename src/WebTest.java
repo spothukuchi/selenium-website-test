@@ -22,14 +22,14 @@ public class WebTest {
 		//String node = "http:narmada.cegres.co.in:4444/wd/hub";
 		
 		//headless mode
-		/*FirefoxBinary firefoxBinary = new FirefoxBinary(); 
+		FirefoxBinary firefoxBinary = new FirefoxBinary(); 
 		firefoxBinary.addCommandLineOptions("--headless");
 		FirefoxOptions firefoxOptions = new FirefoxOptions();
 		firefoxOptions.setBinary(firefoxBinary);
-		FirefoxDriver driver = new FirefoxDriver(firefoxOptions);*/
+		FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
 		
 		//head mode
-		WebDriver driver = new FirefoxDriver();
+		//WebDriver driver = new FirefoxDriver();
 		
 		//selenium grid
 		/*DesiredCapabilities cap = DesiredCapabilities.firefox();
