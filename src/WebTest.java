@@ -15,7 +15,7 @@ public class WebTest {
 	@org.testng.annotations.Test
 	public static void main(String[] args) throws MalformedURLException {
 		System.setProperty("webdriver.gecko.driver", "~/geckodriver");
-		
+		//System.setProperty("webdriver.gecko.driver", "./bin/geckodriver.exe");
 		//web app to be tested
 		String url = "http://facebook.com";
 		
