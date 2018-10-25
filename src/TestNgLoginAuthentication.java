@@ -9,12 +9,22 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class WebTest {
+public class TestNgLoginAuthentication {
+	
+	  @BeforeClass
+	  public void beforeClass() {
+	  }
+
+	  @AfterClass
+	  public void afterClass() {
+	  }
 
 	@Test
-	public static void main(String[] args) throws MalformedURLException {
+	public void f() throws MalformedURLException {
 		System.setProperty("webdriver.gecko.driver", "~/geckodriver");
 		//System.setProperty("webdriver.gecko.driver", "./bin/geckodriver.exe");
 		
