@@ -13,13 +13,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class WebTest {
 
 	public static void main(String[] args) throws MalformedURLException {
-		System.setProperty("webdriver.gecko.driver", "./bin/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "~/geckodriver");
 		
 		//web app to be tested
 		String url = "http://facebook.com";
 		
 		//selenium grid url
-		String node = "http:narmada.cegres.co.in:4444/wd/hub";
+		//String node = "http:narmada.cegres.co.in:4444/wd/hub";
 		
 		//headless mode
 		/*FirefoxBinary firefoxBinary = new FirefoxBinary(); 
