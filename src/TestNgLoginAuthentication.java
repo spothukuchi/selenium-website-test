@@ -3,12 +3,9 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -21,7 +18,7 @@ public class TestNgLoginAuthentication {
 	@BeforeClass
 	public void beforeClass() {
 		// web app to be tested
-		url = "http://facebook.com";
+		url = "http://narmada.cegres.co.in:3001/";
 		System.setProperty("webdriver.gecko.driver", "~/geckodriver");
 		//System.setProperty("webdriver.gecko.driver", "./bin/geckodriver.exe");
 		// headless mode
@@ -51,9 +48,9 @@ public class TestNgLoginAuthentication {
 		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		driver.findElement(By.name("email")).sendKeys("dummy");
-		driver.findElement(By.name("pass")).sendKeys("dummy");
-		driver.findElement(By.id("loginbutton")).click();
+		driver.findElement(By.name("login")).sendKeys("devops");
+		driver.findElement(By.name("password")).sendKeys("test");
+		driver.findElement(By.name("click")).click();
 	}
 
 	@AfterClass
